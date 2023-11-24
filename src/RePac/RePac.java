@@ -3,8 +3,19 @@ package RePac;
 public class RePac {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+		Modelo modelo = new Modelo();
+		 
+		   //La vista se inicia pero no se muestra (visible = false)
+		   Vista vista = new Vista();
+		 
+		   //El controlador arranca 
+		   Controlador controlador = new Controlador(vista,modelo);
+		 
+		   PantallaCarga splash = new PantallaCarga();
+		 
+		   //Cuando ha terminado la ejecucion del SplashScreen
+		   // se muestra la ventana principal
+	vista.setVisible(true);
 
 	}
 
