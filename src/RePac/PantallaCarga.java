@@ -39,7 +39,7 @@ public class PantallaCarga extends JDialog {
 	      JLabel lblImagen = new JLabel();
 	      //Indico la imagen que quiero mostrar en la label
 	      //Me da fallo con imagen
-	    //  lblImagen.setIcon(new ImageIcon(SplashScreen.class.getResource("splashscrean.jpg")));
+	    // lblImagen.setIcon(new ImageIcon(SplashScreen.class.getResource("/Repac/RePac splashscreen.png")));
 	      contentPane.add(lblImagen, BorderLayout.CENTER);
 	 
 	      //Creo un panel al sur con una barra de carga y una label para el autor
@@ -50,7 +50,7 @@ public class PantallaCarga extends JDialog {
 	      barraProgreso.setStringPainted(true);
 	      panelInferior.add(barraProgreso);
 	 
-	      JLabel lblFersoft = new JLabel("FerSoft 2020");
+	      JLabel lblFersoft = new JLabel("RePac V1.0");
 	      lblFersoft.setForeground(Color.BLUE);
 	      lblFersoft.setHorizontalAlignment(SwingConstants.CENTER);
 	      panelInferior.add(lblFersoft);
