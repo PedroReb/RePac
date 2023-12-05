@@ -9,7 +9,7 @@ public class RePac {
 		   Vista vista = new Vista();
 		 
 		   //El controlador arranca 
-		   Controlador controlador = new Controlador(vista,modelo);
+		   Controlador controlador = new Controlador(vista,modelo, null);
 		 
 		   PantallaCarga splash = new PantallaCarga();
 		 
