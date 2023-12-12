@@ -1,20 +1,16 @@
 package RePac;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.awt.SplashScreen;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
-import javax.swing.border.EmptyBorder;
+
+import RePac.Controlador;
 
 public class PantallaCarga extends JDialog {
 
@@ -64,28 +60,33 @@ public class PantallaCarga extends JDialog {
 	      setVisible(true);
 	 
 	      try {
-	         iniciarBarraCarga();
+	        Controlador.iniciarBarraCarga();
+	        
 	      } catch (InterruptedException e) {
 	         throw new RuntimeException(e);
 	      }
+	      Controlador.actualizarBarraProgreso(50);
+	      
+	      
 	      //Al terminar la carga cierro la ventana
 	      dispose();
 	   }
-	 
+	 /*
 	   private void iniciarBarraCarga() throws InterruptedException {
-	      for(int i = 0; i <= 100; i++){
+	  
+		   for(int i = 0; i <= 100; i++){
 	         Thread.sleep(20);
 	         actualizarBarraProgreso(i);
 	      }
 	   }
 	 
 	   private void actualizarBarraProgreso(int valor) {
-	      SwingUtilities.invokeLater(new Runnable() {
+	     SwingUtilities.invokeLater(new Runnable() {
 	         @Override
 	         public void run() {
 	        	 barraProgreso.setValue(valor);
 	         }
 	      });
-	}
+	}*/
 
 }

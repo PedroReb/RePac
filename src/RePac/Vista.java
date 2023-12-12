@@ -6,6 +6,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Vista extends JFrame {
 
@@ -28,9 +32,22 @@ public class Vista extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("RePac");
+		lblNewLabel.setBounds(202, 10, 60, 14);
 		contentPane.add(lblNewLabel);
+		
+		JButton btnIniciar = new JButton("Iniciar");
+		btnIniciar.setBounds(173, 52, 89, 23);
+		contentPane.add(btnIniciar);
+		
+		JButton btnSalir = new JButton("Salir");
+		btnSalir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnSalir.setBounds(173, 186, 89, 23);
+		contentPane.add(btnSalir);
 	}
-
 }
