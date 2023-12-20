@@ -20,7 +20,7 @@ public class PantallaCarga extends JDialog {
 	/**
 	 * Launch the application.
 	 */
-	  private JProgressBar barraProgreso;
+	public JProgressBar barraProgreso;
 
 	/**
 	 * Create the dialog.
@@ -59,19 +59,19 @@ public class PantallaCarga extends JDialog {
 	      setLocationRelativeTo(null); //Mostrar en el centro
 	      setVisible(true);
 	 
-	      try {
-	        Controlador.iniciarBarraCarga();
+	     /* try {
+	        iniciarBarraCarga();
 	        
 	      } catch (InterruptedException e) {
 	         throw new RuntimeException(e);
 	      }
-	      Controlador.actualizarBarraProgreso(50);
+	     actualizarBarraProgreso(50);
 	      
 	      
 	      //Al terminar la carga cierro la ventana
 	      dispose();
 	   }
-	 /*
+	 
 	   private void iniciarBarraCarga() throws InterruptedException {
 	  
 		   for(int i = 0; i <= 100; i++){
@@ -87,6 +87,7 @@ public class PantallaCarga extends JDialog {
 	        	 barraProgreso.setValue(valor);
 	         }
 	      });
-	}*/
-
+	}
+*/
+}
 }

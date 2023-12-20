@@ -16,14 +16,33 @@ import javax.swing.JProgressBar;
 import javax.swing.SwingUtilities;
 import RePac.PantallaCarga;
 public class Controlador {
-	public static JProgressBar barraProgreso;
+	//private JProgressBar barraProgreso;
+	PantallaCarga micarga;
+	
 	public Controlador(Vista vista, Modelo modelo,PantallaCarga carga) {
-	}
+		micarga=carga;
+		/*try {
+	        iniciarBarraCarga();
+	        
+	      } catch (InterruptedException e) {
+	         throw new RuntimeException(e);
+	      }
+	    // actualizarBarraProgreso(50);
+	      */
+	      
+	      //Al terminar la carga cierro la ventana
+	     carga.dispose();
+	   
+	   }
+	
+
+	
+	/*
 		// TODO Auto-generated constructor stub
 		   static void iniciarBarraCarga() throws InterruptedException {
 			      for(int i = 0; i <= 100; i++){
 			         Thread.sleep(50);
-			         actualizarBarraProgreso(i);
+			        // actualizarBarraProgreso(i);
 			      }
 			   }
 			 
@@ -51,9 +70,28 @@ public class Controlador {
 			         }
 			      });
 			}
-		
-	}
+		*/
 
+ 
+   private void iniciarBarraCarga() throws InterruptedException {
+  
+	   for(int i = 0; i <= 100; i++){
+         Thread.sleep(20);
+         actualizarBarraProgreso(i);
+      }
+   }
+ 
+   private void actualizarBarraProgreso(int valor) {
+     SwingUtilities.invokeLater(new Runnable() {
+         @Override
+         public void run() {
+        	 micarga.barraProgreso.setValue(valor);
+        	
+         }
+      });
+}
+	
+}
 	
 
 

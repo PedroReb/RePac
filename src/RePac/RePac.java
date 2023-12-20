@@ -22,7 +22,9 @@ public class RePac {
 		 
 		   //Cuando ha terminado la ejecucion del SplashScreen
 		   // se muestra la ventana principal
-	vista.setVisible(true);
+	//vista.setVisible(true);
+		   controlador.setVisible(true);
+	
 
 	}
 

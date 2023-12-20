@@ -49,5 +49,8 @@ public class Vista extends JFrame {
 		});
 		btnSalir.setBounds(173, 186, 89, 23);
 		contentPane.add(btnSalir);
+		
 	}
+	
+	
 }
