@@ -1,7 +1,11 @@
 package RePac;
 
 public class RePac {
-
+/**
+ * 
+ * @author PedroR
+ * 
+ */
 	public static void main(String[] args) {
 		Modelo modelo = new Modelo();
 		 

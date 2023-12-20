@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"RePac","l":"Controlador"},{"p":"RePac","l":"Modelo"},{"p":"RePac","l":"PantallaCarga"},{"p":"RePac","l":"RePac"},{"p":"RePac","l":"Vista"}];updateSearchResults();
